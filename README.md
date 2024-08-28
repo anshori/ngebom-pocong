@@ -1,6 +1,8 @@
 # Game Javascript Ngebom Pocong
 Hanya sebuah contoh game sederhana menggunakan javascript
 
+![Ngebom Pocong](assets/images/screenshot.png)
+
 [https://anshori.github.io/ngebom-pocong/](https://anshori.github.io/ngebom-pocong/)
 
 ## Cara Bermain
