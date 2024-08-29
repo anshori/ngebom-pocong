@@ -5,6 +5,7 @@ var color = document.getElementById('color');
 var area = document.getElementById('area');
 var skor = document.getElementById('skor');
 var ngece = document.getElementById('ngece');
+var face = document.getElementById('face');
 
 // set variable
 var bombTop = 0;
@@ -100,7 +101,7 @@ document.addEventListener('keydown', function (e) {
 		}, 1000);
 
 	}
-	
+
 	// check the bomb position, there is a difference of -10px to 10px with the pocong position
 	if (pocongTop - 10 <= bombTop && bombTop <= pocongTop + 10 && pocongLeft - 10 <= bombLeft && bombLeft <= pocongLeft + 10) {
 		// change color to green
@@ -120,5 +121,22 @@ document.addEventListener('keydown', function (e) {
 		skor.innerHTML = skorval;
 		color.style.backgroundColor = 'red';
 		ngece.innerHTML = '';
+	}
+
+	// if skor value is every multiple of 10, then alert
+	if (skorval % 10 == 0 && skorval != 0) {
+		skorval += 1;
+		skor.innerHTML = skorval;
+		// face remove attribute hidden
+		face.removeAttribute('hidden');
+
+		// play sound
+		var audio = new Audio('assets/sounds/wow.mp3');
+		audio.play();
+
+		setTimeout(function () {
+			// face add attribute hidden
+			face.setAttribute('hidden', 'hidden');
+		}, 2000);
 	}
 });
