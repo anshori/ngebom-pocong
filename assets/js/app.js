@@ -61,8 +61,8 @@ document.addEventListener('keydown', function (e) {
 		audio.play();
 
 
-		// Check the bomb position, there is a difference of -10px to 10px with the pocong position
-		if (pocongTop - 10 <= bombTop && bombTop <= pocongTop + 10 && pocongLeft - 10 <= bombLeft && bombLeft <= pocongLeft + 10) {
+		// Check the bomb position with the pocong position
+		if (pocongTop - 0 <= bombTop && bombTop <= pocongTop + 30 && pocongLeft - 5 <= bombLeft && bombLeft <= pocongLeft + 40) {
 			skorval += 1;
 			skor.innerHTML = skorval;
 		} else {
@@ -102,8 +102,8 @@ document.addEventListener('keydown', function (e) {
 
 	}
 
-	// check the bomb position, there is a difference of -10px to 10px with the pocong position
-	if (pocongTop - 10 <= bombTop && bombTop <= pocongTop + 10 && pocongLeft - 10 <= bombLeft && bombLeft <= pocongLeft + 10) {
+	// check the bomb position with the pocong position
+	if (pocongTop - 0 <= bombTop && bombTop <= pocongTop + 30 && pocongLeft - 5 <= bombLeft && bombLeft <= pocongLeft + 40) {
 		// change color to green
 		color.style.backgroundColor = 'green';
 	} else {
